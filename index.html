@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="charset" content="utf-8">
+    <title>Héritage GO</title>
+    <meta name="description" content="Héritage GO is the community for heritage lovers.">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+    crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.png" alt="Logo" id="logo" class="left">
+      <button type="button" name="button" id="login" class="right">Log In</button>
+      <div class="group-place">
+        <p class="primary-name arial text_center bold right">Hồ Chí Minh <i class="far fa-compass"></i></p>
+        <br><br>
+        <p class="secondary-name arial text_center bold right">Vietnam</p>
+      </div>
+    </header>
+    <div class="modal fade" id="loginModal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Log in</h4>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> -->
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <input type="text" name="email" class="form-control" id="email" required="">
+                <label for="email">Email address</label>
+              </div>
+              <div class="form-group">
+                <input type="text" name="password" class="form-control" id="password" required="">
+                <label for="password">Password</label>
+                <i id="open" class="fas fa-lock form-control-feedback"></i>
+                <i id="close" style="display:none" class="fas fa-unlock-alt form-control-feedback"></i>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        $("#login").click(function(){
+          $("#loginModal").modal();
+        });
+      });
+
+      // toggle password visibility
+      $(document).ready(function(){
+        $('#open').click(function() {
+          $("#password").attr("type","text");
+          $(this).hide();
+          $("#close").show();
+        });
+        $('#close').click(function() {
+          $("#password").attr("type","password");
+          $(this).hide();
+          $("#open").show();
+        });
+      });
+    </script>
+  </body>
+</html>
