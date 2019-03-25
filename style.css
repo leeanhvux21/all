@@ -7,12 +7,123 @@
    }
 }
 
-header{
+@-webkit-keyframes shake {
+  0% { transform: rotate(12deg); }
+  10% { transform: rotate(-12deg); }
+  20% { transform: rotate(12deg); }
+  30% { transform: rotate(-12deg); }
+  40% { transform: rotate(12deg); }
+  50% { transform: rotate(-12deg); }
+  60% { transform: rotate(12deg); }
+  70% { transform: rotate(-12deg); }
+  80% { transform: rotate(12deg); }
+  90% { transform: rotate(-12deg); }
+  100% { transform: rotate(12deg); }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.widget-section {
+  margin: 4%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 1.5em;
+}
+
+::placeholder {
+  color: #c7c7c7;
+  font-family: Arial, FontAwesome;
+  text-align: left;
+}
+
+#comment-box {
+  margin: 3%;
+  display: block;
+  width: 94%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: black;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 30px;
+}
+
+.widgets {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.feed-section {
+  margin-top: 3%;
+  margin-left: 30%;
+  margin-bottom: 3%;
+  height: auto;
+  width: 600px;
+  border: 1px solid #e6e6e6;
+}
+
+.icon {
+  padding-right: 5px;
+}
+
+.feed-head {
+  margin: 2% 4% 3% 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.widget {
+  padding-right: 1.2em;
+}
+
+header {
   height: 80px;
   max-width: 100%;
   color: #262626;
   padding: 10px 8% 0 15%;
+  border-bottom: 1px solid #e6e6e6;
+}
 
+.profile-img {
+  margin: 2%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+
+.sub-content {
+  display: flex;
+}
+
+.grow {
+  flex-grow: 0.1;
+}
+
+.title {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.caption {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.translate-icon {
+  -webkit-animation: shake 2s infinite;
+  font-size: 2em;
 }
 
 body {
@@ -39,11 +150,11 @@ body {
   float: left;
 }
 
-.group-place{
+.group-place {
   float: right;
   height: 100%;
   width: 55%;
-  text-align: right;
+  text-align: center;
   padding: 0;
   margin: 0;
 }
@@ -117,6 +228,7 @@ h4 {
   border-bottom: 2px solid #85c1e9;
   outline: none;
   background: transparent;
+  box-shadow: none;
 }
 
 .modal-body .form-group label
@@ -141,4 +253,11 @@ h4 {
 
 .modal-body .form-group .form-control-feedback {
   pointer-events: initial;
+}
+
+
+#plane{
+  right: 30px;
+  top: 3px;
+  opacity: 0.5;
 }
