@@ -57,32 +57,33 @@
       </div>
     </div>
       <main role="main">
-        <div class="feed-section">
+        <div id="feed-main">
+        <div id="feed-section" class="feed-section" hidden>
           <div class="feed-head">
             <div class="title">
               <img class="profile-img" src="images/54521996_2242714189275932_4163025226357014528_n.jpg" width="50" height="50">
               <div class="content">
-                <b>The main entrance to Le Van Duyet masoleum - Sai Gon - 1965</b>
+                <b id="photo-title" class="photo-title">The main entrance to Le Van Duyet masoleum - Sai Gon - 1965</b>
                 <div class="sub-content">
                   <div class="grow">
                     <i class="fas fa-map-marker-alt"></i>
-                    <b>Saigon, Vietnam</b>
+                    <b id="photo-location" class="photo-location">Ho Chi Minh City, Vietnam</b>
                   </div>
-                  <div>
+                  <div class="time-area">
                     <i class="far fa-clock"></i>
-                    <b>1965</b>
+                    <b id="photo-time">1965</b>
                   </div>
                 </div>
               </div>
             </div>
             <i class="fas fa-language translate-icon right"></i>
           </div>
-          <img src="images/Forum at Sunset.JPG" width="100%" height="width">
+          <img id="photo-image" src="" width="100%" height="width">
           <div class="widget-section">
             <div class="widgets">
-              <div class="widget"><i class="fas fa-heart icon"></i><b>0</b></div>
-              <div class="widget"><i class="fas fa-comment icon"></i><b>0</b></div>
-              <div><i class="fas fa-camera icon"></i><b>0</b></div>
+              <div class="widget"><i class="fas fa-heart icon"></i><b id="photo-like">0</b></div>
+              <div class="widget"><i class="fas fa-comment icon"></i><b id="photo-comment">0</b></div>
+              <div><i class="fas fa-camera icon"></i><b id="photo-view">0</b></div>
             </div>
             <div>
               <i class="fas fa-bookmark"></i>
@@ -93,8 +94,8 @@
             <i id="plane" class="fab fa-telegram-plane form-control-feedback"></i>
           </div>
         </div>
+        </div>
       </main>
-
     <script>
       $(document).ready(function(){
         $("#login").click(function(){
@@ -115,6 +116,12 @@
           $("#open").show();
         });
       });
+
+
+
+
     </script>
+    <script src="js/main.js"></script>
+    <script src="js/heritagego-service.1.0.0.js"></script>
   </body>
 </html>
