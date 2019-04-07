@@ -17,9 +17,6 @@ function loadPost(offset, limit) {
                         new_content.find('#photo-like').text(photo['like_count']);
                         new_content.find('#photo-comment').text(photo['comment_count']);
                         new_content.find('#photo-view').text(photo['view_count']);
-                        // new_content.find('.input-title').attr('id', photo['photo_id']);
-                        // new_content.find('.title').attr('id', photo['photo_id'] + '+title');
-                        // new_content.find('.dropdown-menu').attr('id', photo['photo_id'] + '+menu');
                         new_content.removeAttr('hidden');
                         new_content.appendTo($('.main'));
                     })
@@ -43,8 +40,8 @@ function getLanguages() {
       content_clone = base_content.clone()
       console.log(content_clone)
       let language = native_code[languages[i]].split(", ")[0];
-      content_clone.find('#tengiday').text(language);
-      content_clone.find('#tengiday').attr('class', alpha1_alpha3[languages[i]]);
+      content_clone.find('#lang_container').text(language);
+      content_clone.find('#lang_container').attr('class', alpha1_alpha3[languages[i]]);
       dropdown_menu.append(content_clone);
     }
   }
@@ -146,29 +143,6 @@ function BlurOnScroll() {
 
 var button;
 
-// function changeCaret(dropdown_button){
-//   if (button != undefined && button != dropdown_button){
-//     $(button).find('#up').hide();
-//     $(button).find('#down').show();
-//     $(button).find('#translate-icon').attr('class', 'shake');
-//   }
-//   var caretup = document.getElementById('up');
-//   console.log($(dropdown_button).find('#translate-icon').hasClass("shake"));
-//   if(caretup.style.display == 'none') {
-//     caretup.style.display = 'inline-block';
-//     $(dropdown_button).find('#up').hide();
-//     $(dropdown_button).find('#down').show();
-//     $(dropdown_button).find('#translate-icon').attr('class', 'shake');
-//   }
-//   else {
-//     caretup.style.display = 'none';
-//     $(dropdown_button).find('#down').hide();
-//     $(dropdown_button).find('#up').show();css('display', 'block')
-//     $(dropdown_button).find('#translate-icon').removeAttr('class', 'shake');
-//   }
-//   button = dropdown_button;
-// }
-
 function changeCaret(dropdown_button){
   if (button != undefined && button != dropdown_button){
     $(button).find('#up').hide();
@@ -207,8 +181,4 @@ $(document).ready(function() {
     $(button).find('#down').show();
     $(button).find('#translate-icon').attr('class', 'shake');
   })
-
-  // var input = document.getElementById
-
-
 });
