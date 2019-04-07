@@ -59,8 +59,8 @@ function LoadOnScroll(offset, limit) {
     });
 }
 
-function input(language) {
 
+function input(language) {
   var class1 = $(language).parents('.feed-head').attr('class').split(" ")[1];
   var lang = language.textContent;
   var lang_code = language.classList[0];
@@ -74,8 +74,8 @@ function input(language) {
   $('.' + class1).find('.input-title:last').attr('id', class1 + '+' + lang_code);
 };
 
-function add(input, event){
 
+function add(input, event){
   if(event.keyCode == 13){
     var class1 = $(input).parents('.feed-head').attr('class').split(" ")[1];
     $('.' + class1).find('.input-title').hide();
@@ -91,6 +91,8 @@ function add(input, event){
     });
   }
 }
+
+
 function showLoginForm(){
   $("#loginModal").modal();
 };
@@ -141,8 +143,8 @@ function BlurOnScroll() {
   })
 };
 
-var button;
 
+var button;
 function changeCaret(dropdown_button){
   if (button != undefined && button != dropdown_button){
     $(button).find('#up').hide();
@@ -164,8 +166,6 @@ function changeCaret(dropdown_button){
   }
   button = dropdown_button;
 }
-
-
 
 
 $(document).ready(function() {
