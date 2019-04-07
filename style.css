@@ -1,0 +1,430 @@
+/* Responsive */
+
+@media (max-width: 320px) {
+
+  #loginModal {
+    zoom: 25%;
+  }
+
+  body {
+    zoom: 70%;
+  }
+
+}
+
+@media (max-width: 375px){
+
+  body {
+    zoom: 83%;
+  }
+
+  #loginModal {
+    zoom: 63%;
+  }
+}
+
+@media (max-width: 425px) {
+  .main {
+    zoom: 70.6%;
+  }
+
+  .header {
+    zoom: 70.6%;
+  }
+
+  .header > #main {
+    zoom: 100%;
+  }
+
+  #loginModal {
+    zoom: 70.6%;
+  }
+}
+
+
+/* -------------------------------------- */
+
+/* Post layout */
+
+.first-line-title {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.input-title{
+  width: 70%;
+  position: absolute;
+  display: none;
+  right: 30%;
+  border: 1px solid black;
+}
+
+.widget-section {
+  margin: 4%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 1.5em;
+}
+
+.photo-title {
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #c7c7c7;
+  font-family: Arial, FontAwesome;
+  text-align: left;
+}
+
+#comment-box {
+  margin: 3%;
+  display: block;
+  width: 94%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: black;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 30px;
+  box-shadow: none;
+}
+
+.widgets {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.feed-section {
+  background-color: white;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  /* height: auto; */
+  width: 600px;
+  border: 1px solid #e6e6e6;
+}
+
+.icon {
+  padding-right: 5px;
+}
+
+.feed-head {
+  margin: 2% 4% 3% 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.widget {
+  padding-right: 1.2em;
+}
+
+.profile-img {
+  margin: 2%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 5%;
+  padding: 0;
+  width: 100%;
+}
+
+.sub-content {
+  display: flex;
+}
+
+.grow {
+  flex-grow: 0.1;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+}
+
+.caption {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.translate-icon {
+  font-size: 2em;
+  margin-left: auto;
+}
+
+.shake{
+  -webkit-animation: shake 1.5s infinite;
+}
+
+
+@-webkit-keyframes shake {
+  0% { transform: rotate(24deg); }
+  10% { transform: rotate(-24deg); }
+  20% { transform: rotate(24deg); }
+  30% { transform: rotate(-24deg); }
+  40% { transform: rotate(24deg); }
+  50% { transform: rotate(-24deg); }
+  60% { transform: rotate(24deg); }
+  70% { transform: rotate(-24deg); }
+  80% { transform: rotate(24deg); }
+  90% { transform: rotate(-24deg); }
+  100% { transform: rotate(24deg); }
+}
+
+#plane {
+  right: 30px;
+  top: 12.5px;
+  opacity: 0.5;
+}
+
+/* ---------------------------------------------- */
+
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: center;
+  max-height: 80px;
+  width: 100%;
+  background-color: rgba(255,255,255,0.3);
+  border-bottom: 1px solid #e6e6e6;
+  position: fixed;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.anotherbox{
+  display: flex;
+  justify-content: center;
+  max-height: 80px;
+  width: 100%;
+}
+
+.header > #main {
+  position: absolute;
+  z-index: -1;
+}
+
+.input{
+  z-index: 0;
+}
+
+/* The Logo and name area */
+.header-feed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 600px;
+  height: inherit;
+  margin-left: 4%;
+}
+
+.header-logo {
+  width: 100px;
+  height: auto;
+  transition: all 0.2s ease-out;
+  margin-top: 5%;
+}
+
+.header-logo:hover {
+  transform: scale(1.1);
+}
+
+/* The name area and the compass */
+.box {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  justify-content: flex-end;
+  width: 40%;
+}
+
+.primary-area-name {
+  font-family: Arial;
+  font-size: 18px;
+  text-align: center;
+}
+
+.secondary-area-name {
+  font-family: Arial;
+  font-size: 14px;
+  text-align: center;
+}
+
+.compass-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#spin {
+  -webkit-animation: rotation 4s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+          -webkit-transform: rotate(0deg);
+  }
+  to {
+          -webkit-transform: rotate(360deg);
+  }
+}
+
+.login-btn {
+  font-family: Arial;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  text-decoration: none;
+  background: none;
+}
+
+.login-pos {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 24px;
+}
+
+
+
+/* ---------------------------------------------- */
+
+/* Login Modal */
+
+.modal-body .form-group
+{
+  position: relative;
+  margin-top: 15px;
+}
+
+h4 {
+  height: 25px;
+}
+
+.modal-body .form-group input
+{
+  width: 100%;
+  height: 40px;
+  padding:10px 0;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #85c1e9;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.modal-body .form-group label
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding:10px 0;
+  font-size: 18px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.modal-body .form-group input:focus ~ label,
+.modal-body .form-group input:valid ~ label
+{
+  top: -30px;
+  left: 0;
+  color: #337ab7;
+
+  font-size: 12px;
+}
+
+.modal-body .form-group .form-control-feedback {
+  pointer-events: initial;
+}
+
+/* ----------------------------------------------- */
+
+body {
+  width: 100%;
+}
+
+.arial{
+  font-family: arial;
+}
+
+.text_center{
+  text-align: center;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}
+
+
+.time-area{
+  width: 70px;
+  padding: 0;
+  margin: 0;
+}
+
+
+.document-body {
+  color: #262626;
+}
+
+.center-self {
+  align-self: center;
+}
+
+.location-area {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.main {
+  display: flex;
+  background-color: #fafafa;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  z-index: 5;
+}
+#feed-main:first-child {
+  display: none;
+}
+
+.language {
+  position: absolute;
+  width: 20%;
+  height: 30px;
+  /* bottom: 5s%; */
+  vertical-align: bottom;
+  right: 2%;
+  display: none;
+}
+
+.show {
+  display: block !important;
+}

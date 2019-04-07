@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="charset" content="utf-8">
+    <meta name="description" content="Héritage GO is the community for heritage lovers.">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+    <title>Héritage GO</title>
+  </head>
+  <body>
+    <header class="header">
+        <div class="anotherbox">
+          <div style="display: flex; flex-grow:1">
+          </div>
+          <div class="header-feed">
+            <div>
+              <img class="header-logo" src="images/logo.png">
+            </div>
+            <div class="box">
+              <div class="location-area center-self">
+                <div class="primary-area-name">
+                  Hồ Chí Minh City
+                </div>
+                <div class="secondary-area-name">
+                  Vietnam
+                </div>
+              </div>
+              <div class="center-self">
+                <i class="far fa-compass compass-icon" id="spin"></i>
+              </div>
+            </div>
+          </div>
+          <div class="login-pos" style="flex-grow:1">
+            <button type="button" name="button" id="login" class="login-btn" onclick="showLoginForm()">Log In</button>
+          </div>
+        </div>
+    </header>
+    <div class="modal fade" id="loginModal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Log In</h4>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <input type="text" name="email" class="form-control" id="email" required="">
+                <label for="email">Email address</label>
+              </div>
+              <div class="form-group">
+                <input type="password" name="password" class="form-control" id="password" required="">
+                <label for="password">Password</label>
+                <i id="open" class="fas fa-lock form-control-feedback" onclick="showPass()"></i>
+                <i id="close" style="display:none" class="fas fa-unlock-alt form-control-feedback" onclick="hidePass()"></i>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main" id="main">
+      <div id="feed-main" class="post">
+        <div id="feed-section" class="feed-section">
+          <div class="feed-head">
+            <div class="title">
+              <img class="profile-img" id="profile-img" width="50" height="50">
+              <div class="content">
+                <div class="first-line-title">
+                  <b id="photo-title" class="photo-title"></b>
+                  <input type="text" name=" " value=" " class="input-title" onkeypress="add(this, event)">
+                  <div class="dropdown translate-icon">
+                    <div class="btn dropdown-toggle" data-toggle="dropdown" onclick="changeCaret(this)">
+                      <img src="images/21bdaf939d.png" width="20" height="20" class="shake" id="translate-icon">
+                      <span id="down" class="caret"></span>
+                      <span id="up" style="display:none" class="dropup">
+                        <span class="caret"></span>
+                      </span>
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li id="single_lang"><a id="tengiday" href="#" onclick="input(this)"></a></li>
+                    </ul>
+                </div>
+                <div class="language">
+                </div>
+
+                  <!-- <img src="images/21bdaf939d.png" width="20" height="20" class="translate-icon shake"> -->
+                </div>
+
+                <div class="sub-content">
+                  <div class="grow">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <b id="photo-location" class="photo-location"></b>
+                  </div>
+                  <div class="time-area">
+                    <i class="far fa-clock"></i>
+                    <b id="photo-time"></b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img id="photo-image" src="" width="100%" height="width">
+          <div class="widget-section">
+            <div class="widgets">
+              <div class="widget"><i class="fas fa-heart icon"></i><b id="photo-like">0</b></div>
+              <div class="widget"><i class="fas fa-comment icon"></i><b id="photo-comment">0</b></div>
+              <div><i class="fas fa-camera icon"></i><b id="photo-view">0</b></div>
+            </div>
+            <div>
+              <i class="fas fa-bookmark"> </i>
+            </div>
+          </div>
+          <div class="form-group" style="position: relative">
+            <input id="comment-box" class="form-control input" type="text" placeholder="Write a comment">
+            <i id="plane" class="fab fa-telegram-plane form-control-feedback"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+    crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/heritagego-service.1.0.0.js"></script>
+    <script src="js/language_dict.js"></script>
+  </body>
+</html>
